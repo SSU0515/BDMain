@@ -5,6 +5,10 @@ import MiddleMotion from "./MiddleMotion";
 import img from "../../asset/contact.png";
 import logoBg from "../../asset/LogoMark.png";
 import imgM from "../../asset/Mcontact.png";
+import banner1 from "../../asset/banner1.png"
+import banner2 from "../../asset/banner2.png"
+import banner3 from "../../asset/banner3.png"
+import banner4 from "../../asset/banner4.png"
 
 const Container = styled.div`
   width: 100vw;
@@ -81,7 +85,23 @@ const MidTitle = styled(motion.h2)`
   }
 `;
 
-
+const BannerBox =styled.div`
+width: 100vw;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+position: absolute;
+  bottom: 15vw;
+  left: 0;
+img{
+  width: 50vw;
+}
+@media (max-width: 600px) {
+  grid-template-columns: repeat(1,1fr);
+  img{
+  width: 100vw;
+}
+  }
+`
 
 function Bottom() {
   return (
@@ -120,7 +140,12 @@ function Bottom() {
         alt="img"
       />
       <ImgM src={imgM} alt="imgM" />
-
+<BannerBox>
+<img src={banner1} alt="banner1"/>
+<img src={banner2} alt="banner2"/>
+<img src={banner3} alt="banner3"/>
+<img src={banner4} alt="banner4"/>
+</BannerBox>
     </Container>
   );
 }
