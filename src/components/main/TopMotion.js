@@ -27,8 +27,7 @@ const Light = styled.div`
 
 const SvgWrapper = styled.div`
   position: relative;
-  height: 1200px;
-
+  height: 1000px;
   @media (max-width: 600px) {
     display: none;
   }

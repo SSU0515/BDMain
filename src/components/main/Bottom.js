@@ -5,8 +5,6 @@ import MiddleMotion from "./MiddleMotion";
 import img from "../../asset/contact.png";
 import logoBg from "../../asset/LogoMark.png";
 import imgM from "../../asset/Mcontact.png";
-import map from "../../asset/banner.png";
-import bannerM from "../../asset/mobilebanner.png";
 
 const Container = styled.div`
   width: 100vw;
@@ -50,16 +48,7 @@ const Img2 = styled(motion.img)`
     padding-top: 80px;
   }
 `;
-const Img3 = styled(motion.img)`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  opacity: 80%;
-  @media (max-width: 600px) {
-    display: none;
-  }
-`;
+
 
 const Title = styled(motion.h2)`
   position: absolute;
@@ -92,17 +81,7 @@ const MidTitle = styled(motion.h2)`
   }
 `;
 
-const Mbanner = styled.img`
-  display: none;
-  @media (max-width: 600px) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    display: block;
-    opacity: 70%;
-  }
-`;
+
 
 function Bottom() {
   return (
@@ -141,8 +120,7 @@ function Bottom() {
         alt="img"
       />
       <ImgM src={imgM} alt="imgM" />
-      <Img3 src={map} alt="map" />
-      <Mbanner src={bannerM} alt="Mbanner" />
+
     </Container>
   );
 }
